@@ -16,13 +16,14 @@ namespace MiniGame
 
         public void CheckCoordRange()
         {
-            if (playerX <= 0) playerX = 0;
-            if (playerY <= 0) playerX = 0;
+            if (playerX <= 0) playerX ++;
+            if (playerY <= 0) playerY ++;
         }
 
         public void DrawCharacter()
         {
             Console.SetCursorPosition(playerX, playerY);
+            CheckCoordRange();
             Console.WriteLine(playerCharacter);
         }
 
