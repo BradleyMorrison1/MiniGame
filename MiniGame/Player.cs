@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace MiniGame
 {
-    class Program
+    class Player : GameCharacter
     {
-        static void Main(string[] args)
+        public Player()
         {
 
-            Player player = new Player();
         }
     }
 }
