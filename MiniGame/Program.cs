@@ -10,8 +10,14 @@ namespace MiniGame
     {
         static void Main(string[] args)
         {
-
             Player player = new Player();
+
+            bool isRunning = true;
+
+            while(isRunning)
+            {
+                player.MovePlayer();
+            }
         }
     }
 }

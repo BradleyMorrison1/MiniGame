@@ -10,7 +10,6 @@ namespace MiniGame
     {
         public Player()
         {
-
         }
     }
 }
