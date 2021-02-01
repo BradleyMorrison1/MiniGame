@@ -14,64 +14,68 @@ namespace MiniGame
         public int playerX = Console.CursorLeft;
         public int playerY = Console.CursorTop;
 
-        public void checkCoordRange()
+        public void CheckCoordRange()
         {
-            if (playerX < 0) playerX = 0;
-            if (playerY < 0) playerX = 0;
+            if (playerX <= 0) playerX = 0;
+            if (playerY <= 0) playerX = 0;
+        }
+
+        public void DrawCharacter()
+        {
+            Console.SetCursorPosition(playerX, playerY);
+            Console.WriteLine(playerCharacter);
         }
 
         public void MovePlayer()
         {
-            checkCoordRange();
-
             ConsoleKeyInfo userInput = Console.ReadKey(true);
 
             switch (userInput.KeyChar)
             {
                 case 'w':
                     Console.Clear();
-                    Console.SetCursorPosition(playerX, playerY--);
-                    Console.Write(playerCharacter);
+                    playerY--;
+                    DrawCharacter();
                     break;
                 case 'a':
                     Console.Clear();
-                    Console.SetCursorPosition(playerX--, playerY);
-                    Console.Write(playerCharacter);
+                    playerX--;
+                    DrawCharacter();
                     break;
 
                 case 's':
                     Console.Clear();
-                    Console.SetCursorPosition(playerX, playerY++);
-                    Console.Write(playerCharacter);
+                    playerY++;
+                    DrawCharacter();
                     break;
 
                 case 'd':
                     Console.Clear();
-                    Console.SetCursorPosition(playerX++, playerY);
-                    Console.Write(playerCharacter);
+                    playerX++;
+                    DrawCharacter();
                     break;
 
                 case 'W':
                     Console.Clear();
-                    Console.SetCursorPosition(playerX, playerY--);
-                    Console.Write(playerCharacter);
+                    playerY--;
+                    DrawCharacter();
                     break;
                 case 'A':
                     Console.Clear();
-                    Console.SetCursorPosition(playerX--, playerY);
-                    Console.Write(playerCharacter);
+                    playerX--;
+                    DrawCharacter();
                     break;
 
                 case 'S':
                     Console.Clear();
-                    Console.SetCursorPosition(playerX, playerY++);
-                    Console.Write(playerCharacter);
+                    playerY++;
+                    DrawCharacter();
                     break;
 
                 case 'D':
                     Console.Clear();
-                    Console.SetCursorPosition(playerX++, playerY);
-                    Console.Write(playerCharacter);
+                    playerX++;
+                    DrawCharacter();
                     break;
             }
         }
