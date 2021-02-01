@@ -9,7 +9,6 @@ namespace MiniGame
     class GameCharacter
     {
         public string playerCharacter = "█";
-        public string userInput;
 
         public int playerX = Console.CursorLeft;
         public int playerY = Console.CursorTop;
@@ -36,47 +35,39 @@ namespace MiniGame
                 case 'w':
                     Console.Clear();
                     playerY--;
-                    DrawCharacter();
                     break;
                 case 'a':
                     Console.Clear();
                     playerX--;
-                    DrawCharacter();
                     break;
 
                 case 's':
                     Console.Clear();
                     playerY++;
-                    DrawCharacter();
                     break;
 
                 case 'd':
                     Console.Clear();
                     playerX++;
-                    DrawCharacter();
                     break;
 
                 case 'W':
                     Console.Clear();
                     playerY--;
-                    DrawCharacter();
                     break;
                 case 'A':
                     Console.Clear();
                     playerX--;
-                    DrawCharacter();
                     break;
 
                 case 'S':
                     Console.Clear();
                     playerY++;
-                    DrawCharacter();
                     break;
 
                 case 'D':
                     Console.Clear();
                     playerX++;
-                    DrawCharacter();
                     break;
             }
         }

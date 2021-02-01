@@ -17,6 +17,7 @@ namespace MiniGame
             while(isRunning)
             {
                 player.MovePlayer();
+                player.DrawCharacter();
             }
         }
     }
